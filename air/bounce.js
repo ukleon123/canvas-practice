@@ -4,7 +4,7 @@ var frame;
 
 var particle = function(){
     this.position = new vec2d(0, 0);
-    this.velocity = new vec2d(Math.random(), Math.random());
+    this.velocity = new vec2d(Math.random() * 5, Math.random() * 5);
 }
 
 var tmp = new particle();
@@ -14,7 +14,7 @@ window.onload = function(){
 
     particle.prototype.draw = function(){
         ctx.beginPath();
-        ctx.arc(this.position.x, this.position.y, 10, 0, Math.PI * 2, true);
+        ctx.arc(this.position.x, this.position.y, 3, 0, Math.PI * 2, true);
         ctx.closePath();
         ctx.fillStyle = "black";
         ctx.fill();
