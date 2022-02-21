@@ -14,10 +14,11 @@ window.onload = function(){
     canvas = document.getElementById("minigame");
     ctx = canvas.getContext("2d");
     obj1 = new particle(1, 250);
-    obj2 = new particle(499, 0);
-    obj1.vel.x = 1;
-    obj2.vel.y = -10;
-    obj2.vel.x = 10;
+    obj2 = new particle(499, 1);
+    obj1.vel.x = Math.random() * 10;
+    obj1.vel.y = Math.random() * 10;
+    obj2.vel.x = Math.random() * 10;
+    obj2.vel.y = Math.random() * 10;
     obj.push(obj1);
     obj.push(obj2);
     particle.prototype.draw = function(){
